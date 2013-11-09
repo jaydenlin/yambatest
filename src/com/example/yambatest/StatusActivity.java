@@ -40,8 +40,10 @@ public class StatusActivity extends Activity implements OnClickListener{
 			startActivity(new Intent(this,PrefsActivity.class));
 			break;
 		case R.id.stratService:
+			startService(new Intent(this,UpdateService.class));
 			break;
 		case R.id.stopService:
+			stopService(new Intent(this,UpdateService.class));
 			break;
 		default:
 			break;
