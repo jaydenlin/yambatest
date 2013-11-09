@@ -63,6 +63,7 @@ public class UpdateService extends Service{
 		@Override
 		public void run() {
 			UpdateService updateService = UpdateService.this;
+			Log.w(TAG,"start service");
 			while(updateService.runFlag==true){
 				try{
 					try{
@@ -72,9 +73,9 @@ public class UpdateService extends Service{
 					}
 					
 					for(Twitter.Status status:timeline){
-						Log.d(TAG,String.format("%s: %s", status.user.name,status.text));
+						Log.w(TAG,"print timline");
+						Log.w(TAG,String.format("%s: %s", status.user.name,status.text));
 					}
-					
 					Thread.sleep(10000);
 				}catch(InterruptedException interruptedException){
 					updateService.runFlag =false;

@@ -25,6 +25,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PrefsActivity"></activity>
+        <service android:name=".UpdateService"></service>
     </application>
 
 </manifest>
